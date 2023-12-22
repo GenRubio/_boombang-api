@@ -21,4 +21,9 @@ $router->group([
     ], function () use ($router) {
         $router->post('user', 'Game\UserController@index');
     });
+    $router->group([
+        'prefix' => 'loaders',
+    ], function () use ($router) {
+        $router->get('sceneries', 'Loaders\SceneryLoaderController@index');
+    });
 });
