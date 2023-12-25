@@ -12,8 +12,6 @@ $router->group([
     ], function () use ($router) {
         $router->post('login', 'Auth\AuthController@login');
         $router->post('logout', 'Auth\AuthController@logout');
-        $router->post('refresh', 'Auth\AuthController@refresh');
-        $router->post('user-profile', 'Auth\AuthController@me');
     });
     $router->group([
         'prefix' => 'game',
@@ -25,5 +23,6 @@ $router->group([
         'prefix' => 'loaders',
     ], function () use ($router) {
         $router->get('sceneries', 'Loaders\SceneryLoaderController@index');
+        $router->get('areas', 'Loaders\SceneryAreaLoaderController@index');
     });
 });
