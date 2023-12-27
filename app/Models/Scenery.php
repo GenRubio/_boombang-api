@@ -20,6 +20,7 @@ class Scenery extends Model
         'map_area',
         'door_position_x',
         'door_position_y',
+        'door_position_z',
         'active',
     ];
 }

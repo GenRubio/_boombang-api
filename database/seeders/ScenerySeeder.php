@@ -49,6 +49,7 @@ class ScenerySeeder extends Seeder
             1111111111111111111111111111',
             'door_position_x' => 11,
             'door_position_y' => 11,
+            'door_position_z' => 4,
             'active' => true,
         ]);
     }

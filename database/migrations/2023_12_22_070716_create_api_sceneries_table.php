@@ -24,6 +24,7 @@ return new class extends Migration
             $table->longText('map_area');
             $table->integer('door_position_x')->default(0);
             $table->integer('door_position_y')->default(0);
+            $table->integer('door_position_z')->default(4);
             $table->boolean('active')->default(true);
             $table->timestamps();
         });
