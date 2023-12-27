@@ -22,7 +22,8 @@ return new class extends Migration
             $table->integer('max_visitors')->nullable();
             $table->longText('content')->nullable();
             $table->longText('map_area');
-            $table->text('respawn_positions');
+            $table->integer('door_position_x')->default(0);
+            $table->integer('door_position_y')->default(0);
             $table->boolean('active')->default(true);
             $table->timestamps();
         });

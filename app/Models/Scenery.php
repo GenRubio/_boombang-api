@@ -18,7 +18,8 @@ class Scenery extends Model
         'coco_price',
         'max_visitors',
         'map_area',
-        'respawn_positions',
+        'door_position_x',
+        'door_position_y',
         'active',
     ];
 }

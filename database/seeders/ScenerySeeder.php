@@ -47,13 +47,8 @@ class ScenerySeeder extends Seeder
             1111111111111111111111111111
             1111111111111111111111111111
             1111111111111111111111111111',
-            'respawn_positions' => json_encode([
-                [
-                    'x' => 11,
-                    'y' => 11,
-                    'z' => 4,
-                ]
-            ]),
+            'door_position_x' => 11,
+            'door_position_y' => 11,
             'active' => true,
         ]);
     }
