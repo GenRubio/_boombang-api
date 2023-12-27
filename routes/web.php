@@ -5,7 +5,6 @@ $router->get('/', function () {
 });
 $router->group([
     'prefix' => 'api',
-    'middleware' => 'cors'
 ], function () use ($router) {
     $router->group([
         'prefix' => 'auth'
