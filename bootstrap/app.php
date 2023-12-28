@@ -81,6 +81,7 @@ $app->middleware([
 
 $app->routeMiddleware([
     'auth' => App\Http\Middleware\Authenticate::class,
+    'localhost' => App\Http\Middleware\LocalhostOnlyMiddleware::class,
 ]);
 
 /*
