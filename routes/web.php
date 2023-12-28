@@ -11,6 +11,7 @@ $router->group([
     ], function () use ($router) {
         $router->post('login', 'Auth\AuthController@login');
         $router->post('logout', 'Auth\AuthController@logout');
+        $router->get('verify', 'Auth\AuthController@verify');
     });
     $router->group([
         'prefix' => 'game',

@@ -12,7 +12,7 @@ class AuthController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['login', 'refresh', 'logout']]);
+        $this->middleware('auth:api', ['except' => ['login', 'refresh', 'logout', 'verify']]);
     }
     /**
      * Get a JWT via given credentials.
@@ -81,5 +81,10 @@ class AuthController extends Controller
             'access_token' => $token,
             'socket_token' => auth()->user()->web_socket_id,
         ]);
+    }
+
+    public function verify()
+    {
+        return response()->json(['message' => 'Authorized']);
     }
 }
