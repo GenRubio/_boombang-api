@@ -9,7 +9,7 @@ class LocalhostOnlyMiddleware
     public function handle($request, Closure $next)
     {
         // Verifica si la solicitud proviene de localhost
-        if ($request->ip() != '127.0.0.1' && $request->ip() != '::1') {
+        if ($request->ip() != config('app.ip')) {
             // Si no es localhost, retorna un error o redirige
             return response('Acceso no permitido', 403);
         }
