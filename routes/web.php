@@ -21,7 +21,7 @@ $router->group([
     });
     $router->group([
         'prefix' => 'loaders',
-        'middleware' => 'localhost'
+        //'middleware' => 'localhost'
     ], function () use ($router) {
         $router->get('sceneries', 'Loaders\SceneryLoaderController@index');
         $router->get('areas', 'Loaders\SceneryAreaLoaderController@index');
