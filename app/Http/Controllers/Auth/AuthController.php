@@ -12,7 +12,7 @@ class AuthController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['login', 'refresh', 'logout', 'verify']]);
+        $this->middleware('auth:api', ['except' => ['login', 'refresh', 'logout']]);
     }
     /**
      * Get a JWT via given credentials.
