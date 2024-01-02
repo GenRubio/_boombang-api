@@ -32,7 +32,6 @@ class AuthController extends Controller
         if (!$token = Auth::attempt($credentials)) {
             return response()->json(['message' => 'Unauthorized'], 401);
         }
-        auth()->user()->updateSocketToken();
         return $this->respondWithToken($token);
     }
 
@@ -79,7 +78,6 @@ class AuthController extends Controller
     {
         return response()->json([
             'access_token' => $token,
-            'socket_token' => auth()->user()->web_socket_id,
         ]);
     }
 

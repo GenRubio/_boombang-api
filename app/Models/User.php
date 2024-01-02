@@ -9,7 +9,6 @@ use Illuminate\Database\Eloquent\Model;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
-use Ramsey\Uuid\Uuid;
 
 class User extends Model implements AuthenticatableContract, AuthorizableContract, JWTSubject 
 {
@@ -17,7 +16,6 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
 
     protected $table = 'api_users';
     protected $fillable = [
-        'web_socket_id',
         'username', 
         'email',
         'password',
@@ -35,12 +33,5 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
     public function getJWTCustomClaims()
     {
         return [];
-    }
-
-    public function updateSocketToken()
-    {
-        $uuid = Uuid::uuid4()->toString();
-        UserRepository::updateWebSocketId($this->id, $uuid);
-        $this->web_socket_id = $uuid;
     }
 }
