@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Loaders;
+namespace App\Http\Controllers\Game\Loaders;
 
 use App\Models\Scenery;
 use Illuminate\Http\Request;
